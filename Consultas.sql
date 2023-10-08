@@ -34,7 +34,7 @@ from e01_cliente natural join e01_telefono;
 
 --- 6 ---
 select e01c.nro_cliente, count(distinct nro_factura) as facturas
-from e01_factura right outer join e01_cliente e01c on e01c.nro_cliente = e01_factura.nro_cliente
+from e01_factura full outer join e01_cliente e01c on e01c.nro_cliente = e01_factura.nro_cliente
 group by e01c.nro_cliente;
 
 --- 100 tuplas porque hay 100 clientes distintos ---
