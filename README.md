@@ -50,3 +50,11 @@ npm install
 node api.js
 ```
 
+3. Consultar en Postman. Ejemplos (rellenar puerto):
+```bash
+http://localhost:_mi_puerto/
+```
+```bash
+http://localhost:_mi_puerto_/clients
+```
+
