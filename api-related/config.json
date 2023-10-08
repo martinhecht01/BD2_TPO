@@ -2,9 +2,9 @@
     "port": 3000,
     "database": {
       "user": "postgres",
-      "password": "0417",
+      "password": "password",
       "host": "localhost",
-      "port": 5433,
+      "port": 5432,
       "database": "postgres"
     }
 }
