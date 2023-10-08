@@ -30,4 +30,4 @@ Thumbs.db
 ehthumbs.db
 
 # Optional: Exclude sensitive configuration files
-config.js
+api-related/config.json
