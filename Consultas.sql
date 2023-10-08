@@ -40,3 +40,21 @@ group by e01c.nro_cliente;
 --- 100 tuplas porque hay 100 clientes distintos ---
 
 
+--- 10 ---
+select c.nombre, c.apellido, SUM(f.total_con_iva) as total
+from e01_cliente c join e01_factura f on c.nro_cliente = f.nro_cliente
+group by c.nro_cliente, c.nombre, c.apellido
+
+---vistas ---
+-- 1 --
+declare view facturas_ordenadas_por_fecha as
+    select *
+    from e01_factura
+    order by fecha;
+--2--
+declare view productos_no_facturados as
+    select *
+    from e01_producto
+    where codigo_producto not in (select codigo_producto
+                                  from e01_detalle_factura);
+
