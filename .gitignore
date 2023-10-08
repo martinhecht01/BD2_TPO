@@ -28,3 +28,6 @@ Thumbs.db
 # OS generated files
 .DS_Store
 ehthumbs.db
+
+# Optional: Exclude sensitive configuration files
+config.js
