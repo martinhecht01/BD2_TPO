@@ -51,11 +51,13 @@ node api.js
 ```
 
 3. Consultar en Postman. Ejemplos (rellenar puerto):
+
 Get all clients: seleccionar get en postman y correr
 ```bash
 http://localhost:_mi_puerto_/clients
 ```
 Create client: seleccionar post y agregar un json en el body
+
 Delete client: seleccionar delete y pasarle 
 ```bash
 http://localhost:_mi_puerto_/clients/nro_cliente
