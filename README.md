@@ -38,3 +38,15 @@
      }
    }
 
+## Correr la API
+
+1. Descargar los node modules:
+``` bash
+cd ./bd2/api-related
+npm install
+```
+2. Correr la api:
+```bash
+node api.js
+```
+
