@@ -10,6 +10,10 @@ app.use(express.json());
 const clientsRouter = require('./routes/clients');
 app.use('/clients', clientsRouter);
 
+// Import and use the products router
+const productsRouter = require('./routes/products');
+app.use('/products', productsRouter);
+
 // Set up a basic route
 app.get('/', (req, res) => {
   res.send('Esta es la API del TP de BD2!');

@@ -76,10 +76,63 @@ async function getClients(){
     }
 }
 
+// Function to get all products
+async function getProducts(){
+    try {
+        const query = `
+            SELECT * FROM E01_PRODUCTO;
+        `;
+        const result = await db.any(query);
+        return result;
+    } catch(error) {
+        throw error;
+    }
+}
+
+// Function to create a new product
+async function createProduct(productData) {
+  try {
+    const {codigo_producto, marca, nombre, descripcion, precio, stock} = productData;
+    const query = `
+      INSERT INTO E01_PRODUCTO (codigo_producto, marca, nombre, descripcion, precio, stock)
+      VALUES ($1, $2, $3, $4, $5, $6)
+      RETURNING *;
+    `;
+    const values = [codigo_producto, marca, nombre, descripcion, precio, stock];
+
+    const result = await db.one(query, values);
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Function to modify a product
+async function modifyProduct(productData){
+    try {
+        const {codigo_producto, marca, nombre, descripcion, precio, stock} = productData;
+        const query = `
+            UPDATE E01_PRODUCTO
+            SET marca = $2, nombre = $3, descripcion = $4, precio = $5, stock = $6
+            WHERE codigo_producto = $1
+            RETURNING *;
+        `;
+        const values = [codigo_producto, marca, nombre, descripcion, precio, stock];
+
+        const result = await db.one(query, values);
+        return result;
+    }catch(error){
+        throw error;
+    }
+}
+
 module.exports = {
   createClient,
   deleteClient,
   modifyClient,
   getClients,
+  getProducts,
+  createProduct,
+  modifyProduct,
   db, // You can also export the db object for other queries
 };

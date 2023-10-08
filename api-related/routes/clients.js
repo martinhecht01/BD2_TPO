@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { createClient, deleteClient, modifyClient, getClients } = require('../db'); // Import the createClient function from the database module
+const { createClient, deleteClient, modifyClient, getClients } = require('../db');
 
 // Create a new client
 router.post('/', async (req, res) => {
