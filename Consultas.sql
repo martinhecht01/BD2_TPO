@@ -40,6 +40,30 @@ group by e01c.nro_cliente;
 --- 100 tuplas porque hay 100 clientes distintos ---
 
 
+--- FALTA TESTEAR ESTA SECCION ---
+
+--- 7 ---
+--- Listar todas las Facturas que hayan sido compradas por el cliente de nombre "Pandora" yapellido "Tate" ---
+select * from e01_factura
+where nro_cliente = (select nro_cliente
+                     from e01_cliente
+                     where nombre = 'Pandora' and apellido = 'Tate');
+
+--- 8 ---
+--- Listar todas las Facturas que contengan productos de la marca “In Faucibus Inc.” ---
+select *
+from e01_factura
+where nro_factura in (select nro_factura
+                      from e01_detalle_factura natural join e01_producto
+                      where marca = 'In Faucibus Inc.');
+
+--- 9 ---
+--- Mostrar cada teléfono junto con los datos del cliente ---
+select nro_cliente, codigo_area, nro_telefono, nombre, apellido, direccion, activo
+from e01_telefono natural join e01_cliente;
+
+--- HASTA ACA ---
+
 --- 10 ---
 select c.nombre, c.apellido, SUM(f.total_con_iva) as total
 from e01_cliente c join e01_factura f on c.nro_cliente = f.nro_cliente
