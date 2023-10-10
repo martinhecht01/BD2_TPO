@@ -84,7 +84,7 @@ async function JSONFacturas() {
         });
     }
 
-    fs.writeFile('facturas.json', JSON.stringify(toRet, null, 2), (err) => {
+    fs.writeFile('tickets.json', JSON.stringify(toRet, null, 2), (err) => {
         if (err) throw err;
         console.log('Data has been written to the file.');
     });
