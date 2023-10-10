@@ -89,6 +89,47 @@ async function getProducts(){
     }
 }
 
+// Function to get all phones
+async function getPhones(){
+  try {
+      const query = `
+          SELECT * FROM E01_TELEFONO;
+      `;
+      const result = await db.any(query);
+      return result;
+  } catch(error) {
+      throw error;
+  }
+}
+
+// Function to get all facturas
+async function getFacturas(){
+  try {
+    const query = `
+        SELECT * FROM E01_FACTURA;
+    `;
+    const result = await db.any(query);
+    return result;
+  } catch(error) {
+      throw error;
+  }
+}
+
+// Function to get factura details
+async function getFacturaDetails(nro_factura){
+  try {
+    const query = `
+        SELECT * FROM E01_DETALLE_FACTURA WHERE nro_factura = $1;
+    `;
+    const values = [nro_factura];
+    const result = await db.any(query, values);
+    return result;
+  } catch(error) {
+      throw error;
+  }
+}
+
+
 // Function to create a new product
 async function createProduct(productData) {
   try {
@@ -134,5 +175,8 @@ module.exports = {
   getProducts,
   createProduct,
   modifyProduct,
+  getPhones,
+  getFacturas,
+  getFacturaDetails,
   db, // You can also export the db object for other queries
 };

@@ -1,0 +1,802 @@
+[
+  {
+    "_id": 1,
+    "marca": "Dolor Sit Incorporated",
+    "nombre": "return policy",
+    "descripcion": "risus. In mi",
+    "precio": 443.88,
+    "stock": 404
+  },
+  {
+    "_id": 2,
+    "marca": "A Felis Ullamcorper Company",
+    "nombre": "sales tax",
+    "descripcion": "Nunc mauris elit,",
+    "precio": 192.64,
+    "stock": 854
+  },
+  {
+    "_id": 3,
+    "marca": "Elit A Corp.",
+    "nombre": "household goods",
+    "descripcion": "nec, euismod in,",
+    "precio": 554.79,
+    "stock": 123
+  },
+  {
+    "_id": 4,
+    "marca": "Maecenas Libero Est PC",
+    "nombre": "pet supplies",
+    "descripcion": "lorem, luctus ut,",
+    "precio": 458.81,
+    "stock": 39
+  },
+  {
+    "_id": 5,
+    "marca": "Odio Corp.",
+    "nombre": "scales",
+    "descripcion": "molestie arcu. Sed",
+    "precio": 193.02,
+    "stock": 679
+  },
+  {
+    "_id": 6,
+    "marca": "Et Risus Quisque LLC",
+    "nombre": "coin",
+    "descripcion": "vestibulum massa rutrum",
+    "precio": 835.23,
+    "stock": 236
+  },
+  {
+    "_id": 7,
+    "marca": "Odio Auctor Incorporated",
+    "nombre": "price",
+    "descripcion": "Praesent interdum ligula",
+    "precio": 184.47,
+    "stock": 869
+  },
+  {
+    "_id": 8,
+    "marca": "Elit Pellentesque Consulting",
+    "nombre": "meat",
+    "descripcion": "ante, iaculis nec,",
+    "precio": 724.35,
+    "stock": 899
+  },
+  {
+    "_id": 9,
+    "marca": "Posuere LLP",
+    "nombre": "pet supplies",
+    "descripcion": "rutrum magna. Cras",
+    "precio": 184.12,
+    "stock": 312
+  },
+  {
+    "_id": 10,
+    "marca": "Lobortis Nisi Nibh Consulting",
+    "nombre": "credit card",
+    "descripcion": "Ut tincidunt vehicula",
+    "precio": 613.74,
+    "stock": 611
+  },
+  {
+    "_id": 11,
+    "marca": "Erat Institute",
+    "nombre": "bakery",
+    "descripcion": "Suspendisse aliquet molestie",
+    "precio": 794.93,
+    "stock": 73
+  },
+  {
+    "_id": 12,
+    "marca": "Aptent Taciti Incorporated",
+    "nombre": "fish",
+    "descripcion": "urna convallis erat,",
+    "precio": 943.44,
+    "stock": 498
+  },
+  {
+    "_id": 13,
+    "marca": "Fusce Diam Nunc Ltd",
+    "nombre": "pet supplies",
+    "descripcion": "tristique senectus et",
+    "precio": 300.9,
+    "stock": 391
+  },
+  {
+    "_id": 14,
+    "marca": "Sit Corporation",
+    "nombre": "meat",
+    "descripcion": "nec ligula consectetuer",
+    "precio": 289.23,
+    "stock": 595
+  },
+  {
+    "_id": 15,
+    "marca": "Ligula Aliquam Incorporated",
+    "nombre": "trolley",
+    "descripcion": "ac mattis ornare,",
+    "precio": 469.83,
+    "stock": 881
+  },
+  {
+    "_id": 16,
+    "marca": "Vel Foundation",
+    "nombre": "nutritional information",
+    "descripcion": "turpis. Nulla aliquet.",
+    "precio": 840.71,
+    "stock": 150
+  },
+  {
+    "_id": 17,
+    "marca": "Luctus Vulputate Corp.",
+    "nombre": "sales assistant",
+    "descripcion": "sit amet massa.",
+    "precio": 876.47,
+    "stock": 628
+  },
+  {
+    "_id": 18,
+    "marca": "Vitae Foundation",
+    "nombre": "receipt",
+    "descripcion": "magnis dis parturient",
+    "precio": 349.82,
+    "stock": 931
+  },
+  {
+    "_id": 19,
+    "marca": "Amet Consectetuer Industries",
+    "nombre": "receipt",
+    "descripcion": "mollis. Phasellus libero",
+    "precio": 908.77,
+    "stock": 408
+  },
+  {
+    "_id": 20,
+    "marca": "Auctor Corporation",
+    "nombre": "half price",
+    "descripcion": "dictum placerat, augue.",
+    "precio": 946.39,
+    "stock": 408
+  },
+  {
+    "_id": 21,
+    "marca": "Arcu Vestibulum Ut Consulting",
+    "nombre": "household goods",
+    "descripcion": "Quisque purus sapien,",
+    "precio": 342.01,
+    "stock": 314
+  },
+  {
+    "_id": 22,
+    "marca": "Eu Accumsan Sed Consulting",
+    "nombre": "barcode",
+    "descripcion": "magnis dis parturient",
+    "precio": 667.36,
+    "stock": 315
+  },
+  {
+    "_id": 23,
+    "marca": "Quam Industries",
+    "nombre": "groceries",
+    "descripcion": "tellus eu augue",
+    "precio": 460,
+    "stock": 115
+  },
+  {
+    "_id": 24,
+    "marca": "Enim Associates",
+    "nombre": "",
+    "descripcion": "eu elit. Nulla",
+    "precio": 835.86,
+    "stock": 405
+  },
+  {
+    "_id": 25,
+    "marca": "Dis Parturient Montes Consulting",
+    "nombre": "bag",
+    "descripcion": "Curabitur dictum. Phasellus",
+    "precio": 67.85,
+    "stock": 339
+  },
+  {
+    "_id": 26,
+    "marca": "Lectus Corporation",
+    "nombre": " drugstore ",
+    "descripcion": "risus, at fringilla",
+    "precio": 838.23,
+    "stock": 73
+  },
+  {
+    "_id": 27,
+    "marca": "Nec Tempus Foundation",
+    "nombre": "credit card",
+    "descripcion": "euismod mauris eu",
+    "precio": 391.91,
+    "stock": 517
+  },
+  {
+    "_id": 28,
+    "marca": "Vehicula Pellentesque LLP",
+    "nombre": " drugstore ",
+    "descripcion": "Morbi sit amet",
+    "precio": 815.23,
+    "stock": 73
+  },
+  {
+    "_id": 29,
+    "marca": "Convallis Ligula Donec Foundation",
+    "nombre": "supervisor",
+    "descripcion": "egestas lacinia. Sed",
+    "precio": 58.44,
+    "stock": 323
+  },
+  {
+    "_id": 30,
+    "marca": "Eu Lacus Consulting",
+    "nombre": "fish",
+    "descripcion": "vel nisl. Quisque",
+    "precio": 713.17,
+    "stock": 204
+  },
+  {
+    "_id": 31,
+    "marca": "Tempor Bibendum PC",
+    "nombre": "refundable",
+    "descripcion": "sit amet ornare",
+    "precio": 441.95,
+    "stock": 246
+  },
+  {
+    "_id": 32,
+    "marca": "Montes Nascetur Incorporated",
+    "nombre": "cosmetics",
+    "descripcion": "purus. Nullam scelerisque",
+    "precio": 926.6,
+    "stock": 203
+  },
+  {
+    "_id": 33,
+    "marca": "Turpis Nulla Corp.",
+    "nombre": " drugstore ",
+    "descripcion": "pede, nonummy ut,",
+    "precio": 472.49,
+    "stock": 496
+  },
+  {
+    "_id": 34,
+    "marca": "Eu Eleifend Nec Associates",
+    "nombre": "canned goods",
+    "descripcion": "orci sem eget",
+    "precio": 715.37,
+    "stock": 676
+  },
+  {
+    "_id": 35,
+    "marca": "Euismod Incorporated",
+    "nombre": "chemists ",
+    "descripcion": "enim. Nunc ut",
+    "precio": 762.66,
+    "stock": 139
+  },
+  {
+    "_id": 36,
+    "marca": "Congue A Aliquet Corp.",
+    "nombre": "sales assistant",
+    "descripcion": "diam nunc, ullamcorper",
+    "precio": 758.82,
+    "stock": 778
+  },
+  {
+    "_id": 37,
+    "marca": "Sed Dui Fusce LLC",
+    "nombre": "coin",
+    "descripcion": "eleifend nec, malesuada",
+    "precio": 282.07,
+    "stock": 954
+  },
+  {
+    "_id": 38,
+    "marca": "Arcu Incorporated",
+    "nombre": "bag",
+    "descripcion": "justo eu arcu.",
+    "precio": 53.83,
+    "stock": 681
+  },
+  {
+    "_id": 39,
+    "marca": "Donec Ltd",
+    "nombre": "fresh flowers",
+    "descripcion": "vitae odio sagittis",
+    "precio": 493.23,
+    "stock": 578
+  },
+  {
+    "_id": 40,
+    "marca": "Dolor Dolor Tempus Ltd",
+    "nombre": "check-out counter",
+    "descripcion": "Nullam lobortis quam",
+    "precio": 261.33,
+    "stock": 582
+  },
+  {
+    "_id": 41,
+    "marca": "Massa Integer Vitae Company",
+    "nombre": "change",
+    "descripcion": "mollis non, cursus",
+    "precio": 156.03,
+    "stock": 142
+  },
+  {
+    "_id": 42,
+    "marca": "Proin LLP",
+    "nombre": "on sale",
+    "descripcion": "nibh dolor, nonummy",
+    "precio": 96.03,
+    "stock": 446
+  },
+  {
+    "_id": 43,
+    "marca": "Amet Institute",
+    "nombre": "shopping cart",
+    "descripcion": "id magna et",
+    "precio": 287.84,
+    "stock": 214
+  },
+  {
+    "_id": 44,
+    "marca": "Nec Inc.",
+    "nombre": "on sale",
+    "descripcion": "penatibus et magnis",
+    "precio": 560.95,
+    "stock": 92
+  },
+  {
+    "_id": 45,
+    "marca": "Ultricies Foundation",
+    "nombre": "check-out counter",
+    "descripcion": "Praesent luctus. Curabitur",
+    "precio": 749.66,
+    "stock": 392
+  },
+  {
+    "_id": 46,
+    "marca": "Sed Dictum LLC",
+    "nombre": "fridge",
+    "descripcion": "Nunc ac sem",
+    "precio": 418.23,
+    "stock": 636
+  },
+  {
+    "_id": 47,
+    "marca": "Scelerisque Institute",
+    "nombre": "shopping cart",
+    "descripcion": "sapien. Cras dolor",
+    "precio": 8.12,
+    "stock": 960
+  },
+  {
+    "_id": 48,
+    "marca": "Arcu Morbi PC",
+    "nombre": "aisle",
+    "descripcion": "dignissim tempor arcu.",
+    "precio": 238.07,
+    "stock": 158
+  },
+  {
+    "_id": 49,
+    "marca": "Velit Pellentesque Industries",
+    "nombre": "ticket",
+    "descripcion": "Suspendisse sagittis. Nullam",
+    "precio": 453.92,
+    "stock": 393
+  },
+  {
+    "_id": 50,
+    "marca": "Pede Malesuada Associates",
+    "nombre": "credit card",
+    "descripcion": "pede blandit congue.",
+    "precio": 113.98,
+    "stock": 359
+  },
+  {
+    "_id": 51,
+    "marca": "Mi Pede Nonummy LLC",
+    "nombre": "household goods",
+    "descripcion": "lectus ante dictum",
+    "precio": 567.19,
+    "stock": 427
+  },
+  {
+    "_id": 52,
+    "marca": "Ornare Lectus Justo PC",
+    "nombre": "freezer",
+    "descripcion": "a tortor. Nunc",
+    "precio": 420.78,
+    "stock": 668
+  },
+  {
+    "_id": 53,
+    "marca": "Justo Nec Foundation",
+    "nombre": "groceries",
+    "descripcion": "rhoncus. Nullam velit",
+    "precio": 235.83,
+    "stock": 775
+  },
+  {
+    "_id": 54,
+    "marca": "Ipsum Curabitur LLP",
+    "nombre": "banknote",
+    "descripcion": "fringilla. Donec feugiat",
+    "precio": 606.65,
+    "stock": 759
+  },
+  {
+    "_id": 55,
+    "marca": "A Purus Duis Limited",
+    "nombre": "receipt",
+    "descripcion": "pellentesque a, facilisis",
+    "precio": 766.96,
+    "stock": 831
+  },
+  {
+    "_id": 56,
+    "marca": "Ad Litora Ltd",
+    "nombre": "20% off",
+    "descripcion": "Vivamus non lorem",
+    "precio": 695.45,
+    "stock": 888
+  },
+  {
+    "_id": 57,
+    "marca": "Mauris Blandit Mattis Ltd",
+    "nombre": "sales assistant",
+    "descripcion": "mauris id sapien.",
+    "precio": 692.28,
+    "stock": 50
+  },
+  {
+    "_id": 58,
+    "marca": "In Consectetuer Ipsum Company",
+    "nombre": "product",
+    "descripcion": "fringilla. Donec feugiat",
+    "precio": 270.84,
+    "stock": 487
+  },
+  {
+    "_id": 59,
+    "marca": "Ultricies LLP",
+    "nombre": "manager",
+    "descripcion": "Nunc mauris. Morbi",
+    "precio": 872.29,
+    "stock": 201
+  },
+  {
+    "_id": 60,
+    "marca": "Egestas PC",
+    "nombre": "packaging",
+    "descripcion": "rhoncus. Nullam velit",
+    "precio": 206.65,
+    "stock": 405
+  },
+  {
+    "_id": 61,
+    "marca": "Dui Corporation",
+    "nombre": "bakery",
+    "descripcion": "et malesuada fames",
+    "precio": 277.03,
+    "stock": 51
+  },
+  {
+    "_id": 62,
+    "marca": "Nulla Dignissim Institute",
+    "nombre": "grand opening sale",
+    "descripcion": "eu tempor erat",
+    "precio": 500.85,
+    "stock": 701
+  },
+  {
+    "_id": 63,
+    "marca": "Mauris Sapien Corp.",
+    "nombre": "fish",
+    "descripcion": "rutrum urna, nec",
+    "precio": 794.63,
+    "stock": 100
+  },
+  {
+    "_id": 64,
+    "marca": "Ligula Eu LLC",
+    "nombre": "lift",
+    "descripcion": "nec orci. Donec",
+    "precio": 773.89,
+    "stock": 320
+  },
+  {
+    "_id": 65,
+    "marca": "Arcu Vestibulum Ante Limited",
+    "nombre": "meat",
+    "descripcion": "elit. Nulla facilisi.",
+    "precio": 325.7,
+    "stock": 609
+  },
+  {
+    "_id": 66,
+    "marca": "Egestas Incorporated",
+    "nombre": "price",
+    "descripcion": "est ac facilisis",
+    "precio": 554.45,
+    "stock": 568
+  },
+  {
+    "_id": 67,
+    "marca": "Nibh Dolor Company",
+    "nombre": "fruit",
+    "descripcion": "amet, faucibus ut,",
+    "precio": 197.1,
+    "stock": 297
+  },
+  {
+    "_id": 68,
+    "marca": "Lacus Nulla Tincidunt Inc.",
+    "nombre": "refundable",
+    "descripcion": "ut quam vel",
+    "precio": 607.52,
+    "stock": 757
+  },
+  {
+    "_id": 69,
+    "marca": "Quam Dignissim Limited",
+    "nombre": "fresh flowers",
+    "descripcion": "sapien, cursus in,",
+    "precio": 501.26,
+    "stock": 416
+  },
+  {
+    "_id": 70,
+    "marca": "Quis Massa Foundation",
+    "nombre": "lift",
+    "descripcion": "lorem, auctor quis,",
+    "precio": 658.13,
+    "stock": 475
+  },
+  {
+    "_id": 71,
+    "marca": "Ipsum Donec Sollicitudin Corporation",
+    "nombre": "customer",
+    "descripcion": "Phasellus libero mauris,",
+    "precio": 814.4,
+    "stock": 587
+  },
+  {
+    "_id": 72,
+    "marca": "Metus Company",
+    "nombre": "fruit",
+    "descripcion": "sed pede. Cum",
+    "precio": 801.99,
+    "stock": 952
+  },
+  {
+    "_id": 73,
+    "marca": "Lobortis Tellus LLP",
+    "nombre": "guarantee",
+    "descripcion": "ut nisi a",
+    "precio": 504.62,
+    "stock": 526
+  },
+  {
+    "_id": 74,
+    "marca": "Tincidunt Industries",
+    "nombre": "manager",
+    "descripcion": "in, tempus eu,",
+    "precio": 302.67,
+    "stock": 242
+  },
+  {
+    "_id": 75,
+    "marca": "Aliquam Auctor Associates",
+    "nombre": "groceries",
+    "descripcion": "a, arcu. Sed",
+    "precio": 187.51,
+    "stock": 293
+  },
+  {
+    "_id": 76,
+    "marca": "Morbi Neque Tellus Incorporated",
+    "nombre": "ticket",
+    "descripcion": "non magna. Nam",
+    "precio": 903.9,
+    "stock": 423
+  },
+  {
+    "_id": 77,
+    "marca": "Netus Et Malesuada PC",
+    "nombre": "check-out counter",
+    "descripcion": "ac facilisis facilisis,",
+    "precio": 121.81,
+    "stock": 211
+  },
+  {
+    "_id": 78,
+    "marca": "Augue Eu Ltd",
+    "nombre": "beverages",
+    "descripcion": "Quisque purus sapien,",
+    "precio": 630.96,
+    "stock": 498
+  },
+  {
+    "_id": 79,
+    "marca": "Nec Cursus Inc.",
+    "nombre": "till",
+    "descripcion": "et magnis dis",
+    "precio": 897,
+    "stock": 847
+  },
+  {
+    "_id": 80,
+    "marca": "Suspendisse Tristique Company",
+    "nombre": "guarantee",
+    "descripcion": "nec urna et",
+    "precio": 686.99,
+    "stock": 869
+  },
+  {
+    "_id": 81,
+    "marca": "Vehicula Pellentesque Company",
+    "nombre": "20% off",
+    "descripcion": "risus. Donec nibh",
+    "precio": 518.92,
+    "stock": 212
+  },
+  {
+    "_id": 82,
+    "marca": "Morbi Consulting",
+    "nombre": "nutritional information",
+    "descripcion": "nascetur ridiculus mus.",
+    "precio": 186.34,
+    "stock": 855
+  },
+  {
+    "_id": 83,
+    "marca": "Natoque Penatibus LLC",
+    "nombre": "sales tax",
+    "descripcion": "eget odio. Aliquam",
+    "precio": 539.18,
+    "stock": 808
+  },
+  {
+    "_id": 84,
+    "marca": "Suspendisse Eleifend Cras Limited",
+    "nombre": "cheque",
+    "descripcion": "blandit congue. In",
+    "precio": 289.06,
+    "stock": 70
+  },
+  {
+    "_id": 85,
+    "marca": "In Faucibus Inc.",
+    "nombre": "return policy",
+    "descripcion": "ultrices, mauris ipsum",
+    "precio": 706.33,
+    "stock": 992
+  },
+  {
+    "_id": 86,
+    "marca": "Cras Ltd",
+    "nombre": "fresh flowers",
+    "descripcion": "ultrices, mauris ipsum",
+    "precio": 848.49,
+    "stock": 44
+  },
+  {
+    "_id": 87,
+    "marca": "Enim Nisl Institute",
+    "nombre": "barcode reader",
+    "descripcion": "turpis egestas. Fusce",
+    "precio": 495.94,
+    "stock": 525
+  },
+  {
+    "_id": 88,
+    "marca": "Ornare Tortor Inc.",
+    "nombre": "change",
+    "descripcion": "auctor vitae, aliquet",
+    "precio": 554.92,
+    "stock": 979
+  },
+  {
+    "_id": 89,
+    "marca": "Curabitur Ut Corporation",
+    "nombre": "fruit",
+    "descripcion": "risus. Donec nibh",
+    "precio": 666.28,
+    "stock": 859
+  },
+  {
+    "_id": 90,
+    "marca": "Purus Ac Tellus LLC",
+    "nombre": "delicatessen",
+    "descripcion": "magna a tortor.",
+    "precio": 680.41,
+    "stock": 81
+  },
+  {
+    "_id": 91,
+    "marca": "Neque Incorporated",
+    "nombre": "refundable",
+    "descripcion": "iaculis nec, eleifend",
+    "precio": 856.24,
+    "stock": 207
+  },
+  {
+    "_id": 92,
+    "marca": "At Auctor PC",
+    "nombre": "trolley",
+    "descripcion": "ipsum ac mi",
+    "precio": 798.72,
+    "stock": 46
+  },
+  {
+    "_id": 93,
+    "marca": "Egestas Ligula Inc.",
+    "nombre": "fruit",
+    "descripcion": "purus. Maecenas libero",
+    "precio": 224.28,
+    "stock": 986
+  },
+  {
+    "_id": 94,
+    "marca": "Auctor Quis LLP",
+    "nombre": "shopping basket",
+    "descripcion": "nibh. Quisque nonummy",
+    "precio": 340.28,
+    "stock": 493
+  },
+  {
+    "_id": 95,
+    "marca": "Accumsan Interdum Libero Inc.",
+    "nombre": "household goods",
+    "descripcion": "ut, pellentesque eget,",
+    "precio": 312.53,
+    "stock": 923
+  },
+  {
+    "_id": 96,
+    "marca": "Sed Hendrerit A Corporation",
+    "nombre": "manager",
+    "descripcion": "lacus. Aliquam rutrum",
+    "precio": 772.54,
+    "stock": 818
+  },
+  {
+    "_id": 97,
+    "marca": "Dictum Cursus Inc.",
+    "nombre": "beverages",
+    "descripcion": "orci. Ut semper",
+    "precio": 688.83,
+    "stock": 871
+  },
+  {
+    "_id": 98,
+    "marca": "In Ornare Sagittis Corporation",
+    "nombre": "barcode",
+    "descripcion": "hendrerit id, ante.",
+    "precio": 791.67,
+    "stock": 437
+  },
+  {
+    "_id": 99,
+    "marca": "Fringilla Porttitor Vulputate Corporation",
+    "nombre": "cash only",
+    "descripcion": "consectetuer adipiscing elit.",
+    "precio": 2.14,
+    "stock": 12
+  },
+  {
+    "_id": 100,
+    "marca": "Porttitor Interdum PC",
+    "nombre": " drugstore ",
+    "descripcion": "molestie in, tempus",
+    "precio": 814.7,
+    "stock": 587
+  }
+]

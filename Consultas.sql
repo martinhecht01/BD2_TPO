@@ -43,7 +43,7 @@ group by e01c.nro_cliente;
 --- FALTA TESTEAR ESTA SECCION ---
 
 --- 7 ---
---- Listar todas las Facturas que hayan sido compradas por el cliente de nombre "Pandora" yapellido "Tate" ---
+--- Listar todas las Facturas que hayan sido compradas por el cliente de nombre "Pandora" y apellido "Tate" ---
 select * from e01_factura
 where nro_cliente = (select nro_cliente
                      from e01_cliente
