@@ -81,4 +81,3 @@ declare view productos_no_facturados as
     from e01_producto
     where codigo_producto not in (select codigo_producto
                                   from e01_detalle_factura);
-
