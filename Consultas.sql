@@ -71,12 +71,12 @@ group by c.nro_cliente, c.nombre, c.apellido
 
 ---vistas ---
 -- 1 --
-declare view facturas_ordenadas_por_fecha as
+create view facturas_ordenadas_por_fecha as
     select *
     from e01_factura
     order by fecha;
 --2--
-declare view productos_no_facturados as
+create view productos_no_facturados as
     select *
     from e01_producto
     where codigo_producto not in (select codigo_producto
