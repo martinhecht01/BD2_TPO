@@ -164,5 +164,64 @@ db.clients.aggregate([
     }
 ])
 
+//Ejercicio 8
+db.tickets.aggregate([
+    {
+        $lookup: {
+            from: "products",
+            localField: "detalles.codigo_producto",
+            foreignField: "_id",
+            as: "ticketAndProduct"
+        }
+    },
+    {
+        $match: {
+            "ticketAndProduct.marca": "In Faucibus Inc."
+        }
+    }
+])
 
+// Ejercicio 9
+db.clients.aggregate([
+    {
+        $lookup: {
+            from: "phones",
+            localField: "_id",
+            foreignField: "nro_cliente",
+            as: "clientPhones"
+        }
+    },
+    {
+        $unwind: "$clientPhones"
+    },
+    {
+        $project: {
+            _id: 0,  // Exclude the _id field
+            client_name: "$nombre",  // Include client name
+            client_lastname: "$apellido",  // Include client last name
+            codigo_area: "$clientPhones.codigo_area",
+            nro_telefono: "$clientPhones.nro_telefono"
+        }
+    }
+])
+
+//Ejercicio 10
+db.clients.aggregate([
+    {
+        $lookup: {
+            from: "tickets",
+            localField: "_id",
+            foreignField: "nro_cliente",
+            as: "clientsTickets"
+        }
+    },
+    {
+        $project: {
+            _id: 0, // Exclude the _id field from the output
+            nombre: 1,
+            apellido: 1,
+            gasto: {$sum: "$clientsTickets.total_con_iva"}
+        }
+    }
+])
 
