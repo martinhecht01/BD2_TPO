@@ -112,3 +112,57 @@ db.clients.aggregate([
         }
     }
 ])
+
+
+// Ejercicio 6
+db.clients.aggregate([
+    {
+        $lookup:{
+            from: "tickets",
+            localField: "_id",
+            foreignField: "nro_cliente",
+            as: "clientsTickets"
+        }
+    },
+    {
+        $project:{
+            nombre: 1,
+            apellido: 1,
+            count: {$size: "$clientsTickets"}
+        }
+    }
+])
+
+// Ejercicio 7
+db.clients.aggregate([
+    {
+        $lookup:{
+            from: "tickets",
+            foreignField: "nro_cliente",
+            localField: "_id",
+            as: "clientTickets"
+        }
+    },
+    {
+        $match: {
+            nombre: "Pandora",
+            apellido: "Tate"
+        }
+    },
+    {
+        $unwind: "$clientTickets"
+    },
+    {
+        $project: {
+            nombre: 1,
+            apellido: 1,
+            factura_datos: {
+                id: "$clientTickets._id",
+                fecha_factura: "$clientTickets.fecha"
+            }
+        }
+    }
+])
+
+
+

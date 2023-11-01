@@ -4,6 +4,7 @@
 #docker run -d -p 27017:27017 --name mongodb mongo
 
 # Copy JSON files into the MongoDB container
+# Must match with container name
 docker cp ./tickets.json mongodb:/
 docker cp ./clients.json mongodb:/
 docker cp ./phones.json mongodb:/
@@ -14,8 +15,8 @@ docker cp ./migration-script.js mongodb:/
 docker exec -it mongodb bash
 mongosh
 use E01
-db.createUser({user: "username2", pwd: "password",roles: [ { role: "readWrite", db: "E01" } ]})
-db.auth("username2", "password")
+db.createUser({user: "username", pwd: "password",roles: [ { role: "readWrite", db: "E01" } ]})
+db.auth("username", "password")
 exit
 mongoimport --db E01 --collection phones --jsonArray --file phones.json
 mongoimport --db E01 --collection tickets --jsonArray --file tickets.json
