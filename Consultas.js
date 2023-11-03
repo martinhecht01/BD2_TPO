@@ -225,3 +225,35 @@ db.clients.aggregate([
     }
 ])
 
+// Vista 1
+db.createView(
+    "facturas_por_fecha",
+    "tickets",
+    [{
+        $sort: {
+            fecha: 1
+        }
+    }]
+)
+
+
+//Vista 2
+db.createView(
+    "productos_no_facturados",
+    "products",
+    [
+        {
+            $lookup: {
+                from: "tickets",
+                foreignField: "detalles.codigo_producto",
+                localField: "_id",
+                as: "ticketsAndProducts"
+            }
+        },
+        {
+            $match: {
+                ticketsAndProducts: {$eq: []}
+            }
+        }
+    ]
+)
