@@ -1,10 +1,12 @@
 const pgp = require('pg-promise')();
-const config = require('./config.json').database;
+const configPostgres = require('./config.json').postgresql;
 const { MongoClient } = require('mongodb');
+const configMongo = require('./config.json').mongo;
 
 // Update the connection URI with your username, password, and authentication database
-const uri = 'mongodb://username:password@localhost:27017/E01';
-
+//const uri = 'mongodb://username:password@localhost:27017/E01';
+const uri = 'mongodb://localhost:'+configMongo.port+'/'+configMongo.database;
+//const uri = 'mongodb://localhost:27017/E01';
 async function connectToMongo() {
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
@@ -16,11 +18,11 @@ async function connectToMongo() {
 }
 
 const db = pgp({
-  user: config.user,
-  password: config.password,
-  host: config.host,
-  port: config.port,
-  database: config.database
+  user: configPostgres.user,
+  password: configPostgres.password,
+  host: configPostgres.host,
+  port: configPostgres.port,
+  database: configPostgres.database
 });
 
 // Function to create a new client

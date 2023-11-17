@@ -3,7 +3,7 @@ const router = express.Router();
 const { createClient, deleteClient, modifyClient, getClients, connectToMongo } = require('../db');
 
 // Create a new client
-router.post('/', async (req, res) => {
+router.post('/pg', async (req, res) => {
   try {
     const {nro_cliente, nombre, apellido, direccion, activo } = req.body;
     const newClient = await createClient({nro_cliente, nombre, apellido, direccion, activo });
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 });
 
 // Delete a client
-router.delete('/:nro_cliente', async (req, res) => {
+router.delete('/pg/:nro_cliente', async (req, res) => {
   try {
     const { nro_cliente } = req.params;
     const deletedClient = await deleteClient(nro_cliente);
@@ -27,7 +27,7 @@ router.delete('/:nro_cliente', async (req, res) => {
 });
 
 // Modify a client
-router.put('/:nro_cliente', async (req, res) => {
+router.put('/pg/:nro_cliente', async (req, res) => {
   try {
     const { nro_cliente } = req.params;
     const { nombre, apellido, direccion, activo } = req.body;
@@ -40,7 +40,7 @@ router.put('/:nro_cliente', async (req, res) => {
 });
 
 // Get all clients
-router.get('/', async (req, res) => {
+router.get('/pg/', async (req, res) => {
   try {
     const clients = await getClients();
     res.status(200).json(clients);
@@ -83,6 +83,55 @@ router.post('/mongo', async (req, res) => {
     res.status(500).json({ error: 'An error occurred while creating the client.' });
   } 
 });
+
+router.delete('/mongo/:_id', async (req, res) => {
+  let db;
+  try {
+    const { _id } = req.params;
+    db = await connectToMongo();
+    const result = await db.collection('clients').deleteOne({ _id: parseInt(_id) });
+    const deletedClient = result.deletedCount;
+    res.status(200).json(deletedClient);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'An error occurred while deleting the client.' });
+  }
+});
+
+router.put('/mongo/:_id', async (req, res) => {
+  let db;
+  try {
+    const { _id } = req.params;
+    const { nombre, apellido, direccion, activo } = req.body;
+    db = await connectToMongo();
+    const result = await db.collection('clients').updateOne({ _id: parseInt(_id) }, { $set: { nombre, apellido, direccion, activo } });
+    const modifiedClient = result.modifiedCount;
+    res.status(200).json(modifiedClient);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'An error occurred while modifying the client.' });
+  }
+});
+
+router.get('/mongo', async (req, res) => {
+  let db;
+  try {
+    db = await connectToMongo();
+    const queryResult = db.collection('clients').find({});
+    console.log("Query executed, checking for documents...");
+    
+    const clients = await queryResult.toArray();
+    console.log(`Found ${clients.length} clients`, clients);
+
+    res.status(200).json(clients);
+  } catch (error) {
+    console.error("Error while retrieving clients:", error);
+    res.status(500).json({ error: 'An error occurred while retrieving clients.' });
+  }
+});
+
+
+
 
 module.exports = router;
 
