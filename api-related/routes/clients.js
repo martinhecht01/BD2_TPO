@@ -105,7 +105,7 @@ router.put('/mongo/:_id', async (req, res) => {
     const { nombre, apellido, direccion, activo } = req.body;
     db = await connectToMongo();
     const result = await db.collection('clients').updateOne({ _id: parseInt(_id) }, { $set: { nombre, apellido, direccion, activo } });
-    const modifiedClient = result.modifiedCount;
+    const modifiedClient = result.modifiedCount > 0;
     res.status(200).json(modifiedClient);
   } catch (error) {
     console.error(error);
