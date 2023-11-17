@@ -1,5 +1,19 @@
 const pgp = require('pg-promise')();
 const config = require('./config.json').database;
+const { MongoClient } = require('mongodb');
+
+// Update the connection URI with your username, password, and authentication database
+const uri = 'mongodb://username:password@localhost:27017/E01';
+
+async function connectToMongo() {
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  await client.connect();
+  return client.db();
+}
 
 const db = pgp({
   user: config.user,
@@ -178,5 +192,6 @@ module.exports = {
   getPhones,
   getFacturas,
   getFacturaDetails,
+  connectToMongo,
   db, // You can also export the db object for other queries
 };
