@@ -1,75 +1,123 @@
-# BD2_TPO
 
-## Configuración de Entorno de API
+# Guía de Instalación y Uso
 
-### Paso 1: Descargar y Correr la Base de Datos
+## 1. Inicialización de Bases de Datos
 
-1. Descargar el archivo de esquema de facturación llamado "ITBA_2023_esquema_facturacion.sql (PostgreSQL)".
+### PostgreSQL
 
-2. Crear una imagen de Docker para ejecutar PostgreSQL. Esto lo hicimos en la primera clase.
+1. **Descarga de PostgreSQL:**
+   ```bash
+   docker pull postgres
+   ```
 
-3. Correr el archivo descargado en el punto 1 en el entorno postgres.
+2. **Levantar el Contenedor:**
+   ```bash
+   docker run --name MypostgreSQL -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+   ```
 
-### Paso 2: Configuración del Entorno de la API
+3. **Conexión a PostgreSQL:**
+   - Conéctese a PostgreSQL utilizando su gestor de BD de preferencia.
+   - Ejecute el script `ITBA_2023_esquema_facturacion.sql`.
 
-1. Navegar a la ubicación `BD2_TPO/api-related/config.json`.
+### MongoDB
 
-   > **Nota**: El archivo `config.json` está incluido en el archivo `.gitignore` y no se va a subir al repositorio.
+1. **Descarga de MongoDB:**
+   ```bash
+   docker pull mongo
+   ```
 
-2. En el archivo `config.json`, ajustar los siguientes datos:
+2. **Levantar el Contenedor:**
+   ```bash
+   docker run --name mongo -p 27017:27017 -d mongo
+   ```
 
-   - `port`: Este es el puerto local en el que se va a ejecutar la API, elegir a gusto.
+3. **Transferencia de Datos JSON:**
+   Desde la raíz del repositorio, ejecute:
+   ```bash
+   docker cp ./tickets.json mongodb:/
+   docker cp ./clients.json mongodb:/
+   docker cp ./phones.json mongodb:/
+   docker cp ./products.json mongodb:/
+   ```
 
-   - `database`: Aquí hay que poner los detalles de la imagen de Docker en la que se encuentra PostgreSQL.
+4. **Importación de Datos:**
+   ```bash
+   docker exec -it mongodb bash
+   mongosh
+   use E01
+   db.createUser({user: "username", pwd: "password", roles: [{role: "readWrite", db: "E01"}]})
+   db.auth("username", "password")
+   exit
+   mongoimport --db E01 --collection phones --jsonArray --file phones.json
+   mongoimport --db E01 --collection tickets --jsonArray --file tickets.json
+   mongoimport --db E01 --collection clients --jsonArray --file clients.json
+   mongoimport --db E01 --collection products --jsonArray --file products.json
+   exit
+   ```
 
-   > **Nota**: Tener en cuenta que el "port" en la sección `database` se refiere al puerto donde se ejecuta la imagen de Docker de PostgreSQL, y no al puerto de la API.
+## 2. Configuración del Entorno de la API
 
-   Ejemplo de configuración:
+- Navegue a `BD2_TPO/api-related/config.json`.
+- En `config.json`, ajuste:
+  - `port`: Puerto local para la API.
+  - `postgres`: Detalles de conexión a la BD PostgreSQL.
+  - `mongo`: Detalles de conexión a la BD MongoDB.
 
-   ```json
-   {
-     "port": 3000,
-     "database": {
-       "user": "nombre_de_usuario",
-       "password": "contraseña",
-       "host": "localhost",
-       "port": 5432,
-       "database": "nombre_de_base_de_datos"
-     }
-   }
+## 3. Correr la API
 
-## Correr la API
+1. **Instalación de npm (si es necesario):**
+   ```bash
+   cd ./api-related
+   npm install
+   ```
 
-1. Descargar los node modules:
-``` bash
-cd ./bd2/api-related
-npm install
-```
-2. Correr la api:
-```bash
-node api.js
-```
+2. **Ejecución de la API:**
+   ```bash
+   node api.js
+   ```
 
-3. Consultar en Postman. Ejemplos (rellenar puerto):
+## Uso de la API
 
+Utilice Postman para interactuar con la API en los siguientes endpoints:
 
-Get all clients: seleccionar get en postman y correr
-```bash
-http://localhost:_mi_puerto_/clients
-```
-Create client: seleccionar post y agregar un json en el body
+- **GET:**
+  - `http://localhost:{puerto}/clients/{bd}`
+  - `http://localhost:{puerto}/products/{bd}`
 
+- **POST:**
+  - `http://localhost:{puerto}/clients/{bd}`
+  - `http://localhost:{puerto}/products/{bd}`
+  
+    Ejemplo de JSON para cliente:
+    ```json
+    {
+      "nro_cliente": nro_cliente,
+      "nombre": "nombre",
+      "apellido": "apellido",
+      "direccion": "direccion",
+      "activo": activo
+    }
+    ```
+    Ejemplo de JSON para producto:
+    ```json
+    {
+      "codigo_producto": codigo_producto,
+      "marca": "marca",
+      "nombre": "nombre",
+      "descripcion": "descripcion",
+      "precio": precio,
+      "stock": stock
+    }
+    ```
 
-Delete client: seleccionar delete y pasarle 
+- **PUT:**
+  - `http://localhost:{puerto}/clients/{bd}/:nro_cliente`
+  - `http://localhost:{puerto}/products/{bd}/:codigo_producto`
 
-```bash
-http://localhost:_mi_puerto_/clients/nro_cliente
-```
+    `nro_cliente` y `codigo_producto` son identificadores para modificar.
 
-Modify client: seleccionar put, pasarle lo mismo que el delete y agregarle un body sin el nro_cliente
+- **DELETE:**
+  - `http://localhost:{puerto}/clients/{bd}/:nro_cliente`
+  - `http://localhost:{puarto}/products/{bd}/:codigo_producto`
 
-
-
-
-
-
+    `nro_cliente` y `codigo_producto` son identificadores para eliminar.
