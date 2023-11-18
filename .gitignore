@@ -29,5 +29,5 @@ Thumbs.db
 .DS_Store
 ehthumbs.db
 
-# Optional: Exclude sensitive configuration files
-api-related/config.json
+# # Optional: Exclude sensitive configuration files
+# api-related/config.json
