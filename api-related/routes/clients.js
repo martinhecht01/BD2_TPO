@@ -19,7 +19,7 @@ router.delete('/pg/:nro_cliente', async (req, res) => {
   try {
     const { nro_cliente } = req.params;
     const deletedClient = await deleteClient(nro_cliente);
-    res.status(200).json(deletedClient);
+    res.status(200).json({message: "Client deleted successfully."});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An error occurred while deleting the client.' });
@@ -75,9 +75,9 @@ router.post('/mongo', async (req, res) => {
     const insertedUser = result.ops;
 
     // Respond with the inserted user and a success message
-    res.status(201).json({ user: insertedUser, message: 'User created successfully.' });
+    res.status(201).json(newClient);
 
-    console.log(`User with _id ${newClient._id} has been created.`);
+    console.log(`User with _id ${newClient._id} has been created successfully.`);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An error occurred while creating the client.' });
@@ -91,7 +91,7 @@ router.delete('/mongo/:_id', async (req, res) => {
     db = await connectToMongo();
     const result = await db.collection('clients').deleteOne({ _id: parseInt(_id) });
     const deletedClient = result.deletedCount;
-    res.status(200).json(deletedClient);
+    res.status(200).json({message: "Client deleted successfully."});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An error occurred while deleting the client.' });
@@ -105,8 +105,7 @@ router.put('/mongo/:_id', async (req, res) => {
     const { nombre, apellido, direccion, activo } = req.body;
     db = await connectToMongo();
     const result = await db.collection('clients').updateOne({ _id: parseInt(_id) }, { $set: { nombre, apellido, direccion, activo } });
-    const modifiedClient = result.modifiedCount > 0;
-    res.status(200).json(modifiedClient);
+    res.status(200).json({nro_cliente: _id, nombre, apellido, direccion, activo});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An error occurred while modifying the client.' });

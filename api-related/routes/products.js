@@ -7,7 +7,7 @@ router.post('/pg', async (req, res) => {
   try {
     const { codigo_producto, marca, nombre, descripcion, precio, stock } = req.body;
     const newProduct = await createProduct({codigo_producto, marca, nombre, descripcion, precio, stock});
-    res.status(201).json(newProduct);
+    res.status(201).json({ message: 'Product created successfully.', newProduct});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An error occurred while creating the product.' });
@@ -60,9 +60,8 @@ router.put('/mongo/:codigo_producto', async (req, res) => {
     const { codigo_producto } = req.params;
     const { marca, nombre, descripcion, precio, stock } = req.body;
     db = await connectToMongo();
-    const result = await db.collection('products').updateOne({ _id: parseInt(codigo_producto) }, { $set: { marca, nombre, descripcion, precio, stock } });
-    const modifiedProduct = result.modifiedCount > 0;
-    res.status(200).json(modifiedProduct);
+    const result = await db.collection('products').updateOne({ _id: parseInt(codigo_producto) }, { $set: { marca, nombre, descripcion, precio, stock } });;
+    res.status(200).json(result);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An error occurred while modifying the product.' });
